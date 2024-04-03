@@ -19,12 +19,12 @@ Ready to deploy to Azure?
 ```
 region=westeurope
 resourcegroup=functionspy
-storageaccount=myuniquename
-pythonversion=$pythonversion
-functionapp=$functionapp
+storageaccount=functionspysa
+pythonversion=3.11
+functionapp=functionspyfa
 az group create --name $resourcegroup --location $region
 az storage account create --name $storageaccount --location $region --resource-group $resourcegroup 
-az functionapp create --resource-group AzureFunctionsQuickstart-rg --consumption-plan-location westeurope --runtime python --runtime-version $pythonversion --functions-version 4 --name $functionapp --os-type linux --storage-account $storageaccount
+az functionapp create --resource-group $resourcegroup --consumption-plan-location westeurope --runtime python --runtime-version $pythonversion --functions-version 4 --name $functionapp --os-type linux --storage-account $storageaccount
 func azure functionapp publish $functionapp
 ```
 
