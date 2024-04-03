@@ -1,6 +1,11 @@
 # functionspy
 
 ## 0 Setup
+Before developing Azure Functions, install the following prerequisites:
+Azure command-line interface
+Python version supported by Functions version
+Azurite storage emulator
+
 Install core tools
 ```
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -19,5 +24,7 @@ sudo apt-get install python3-venv
 ```
 
 [Source](https://learn.microsoft.com/azure/azure-functions/create-first-function-cli-python)
+
+[Ref guide](https://learn.microsoft.com/azure/azure-functions/functions-reference-python)
 
 [Home](../README.md)
