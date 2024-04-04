@@ -1,6 +1,8 @@
 # functionspy
 
 ## 0 Setup
+Warning: This page is opinionated :-) You can create Azure Functions in various ways including in the Azure portal, in VS Code and in the command-line. My preference is to create code with the least number of dependencies, and with the option to add it to version control for cicd. That is why this page describes steps to install tools on your local device. As a  shortcut, you can also use Azure cloud shell that has these installed. 
+
 Before developing Azure Functions, install the following prerequisites:
 Azure command-line interface
 Python version supported by Functions version
