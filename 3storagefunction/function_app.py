@@ -8,5 +8,5 @@ app = func.FunctionApp()
 @app.queue_trigger(arg_name="azqueue", queue_name="outqueue",
                                connection="AzureWebJobsStorage") 
 def QueueExample(azqueue: func.QueueMessage):
-    logging.info('Python Queue trigger processed a message: %s',
+    logging.info('Python Queue trigger processed a CICD message: %s',
                 azqueue.get_body().decode('utf-8'))
