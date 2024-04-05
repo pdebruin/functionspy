@@ -21,9 +21,9 @@ def HttpExample(req: func.HttpRequest, msg: func.Out [func.QueueMessage]) -> fun
 
     if name:
         msg.set(name)
-        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
+        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed CICD successfully.")
     else:
         return func.HttpResponse(
-             "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
+             "This HTTP triggered function executed CICD successfully. Pass a name in the query string or in the request body for a personalized response.",
              status_code=200
         )
