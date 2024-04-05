@@ -2,18 +2,18 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure Functions: https://aka.ms/python-webapps-actions
 
-name: Build and deploy 2functionstorage
+name: Build and deploy 4cicd
 
 on:
   push:
     branches:
       - main
     paths:
-      - '2functionstorage/**'
+      - '4cicd/**'
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: './2functionstorage/' # set this to the path to your web app project, defaults to the repository root
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: './4cicd/' # set this to the path to your web app project, defaults to the repository root
   PYTHON_VERSION: '3.11' 
 
 jobs:
