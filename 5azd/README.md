@@ -17,8 +17,16 @@ azd pipeline config
 
 The advantage of using an azd template is that you get a good start for both the function code as well as the infrastructure-as-code. 
 
-The template creates assumes it is created in the root of a repository. In this case, it is created a in folder, and the GitHub Actions file in .github/workflows has to be 
-moved/copied to the root. 
+The template creates assumes it is created in the root of a repository. In this case, it is created a in folder, and the GitHub Actions file in .github/workflows has to be moved/copied to the root. And then the action needs to know its working-directory explicitly like:
+```
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults: 
+      run:
+        working-directory: ./5azd
+
+```
 
 [Source](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/configure-devops-pipeline)
 
