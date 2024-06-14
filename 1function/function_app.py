@@ -2,12 +2,17 @@ import azure.functions as func
 import datetime
 import json
 import logging
+from mytest import myfunc
 
 app = func.FunctionApp()
 
 @app.route(route="HttpExample", auth_level=func.AuthLevel.ANONYMOUS)
 def HttpExample(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
+
+    logging.info("Calling myfunc")
+    logging.info(myfunc())
+    logging.info("myfunc called")
 
     name = req.params.get('name')
     if not name:
